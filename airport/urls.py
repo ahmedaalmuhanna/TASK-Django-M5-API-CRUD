@@ -21,4 +21,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("flights/", flight_views.FlightListView.as_view(), name="flights-list"),
     path("bookings/", flight_views.BookingListView.as_view(), name="bookings-list"),
+    path("bookings/Update/<int:booking_id>/",  flight_views.UpdatingBooking.as_view()),
+    path("bookings/delete/<int:booking_id>/",  flight_views.DeleteBooking.as_view()),
 ]
